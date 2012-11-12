@@ -1,5 +1,4 @@
-shr
-===
+# shr
 
 Sharing made simple.
 
@@ -7,11 +6,11 @@ Sharing made simple.
 
 We assume you have the following tools already installed:
 
-** CoffeeScript **
+**CoffeeScript**
 
     npm install -g coffee-script
 
-** UglifyJS **
+**UglifyJS**
   
     npm install -g uglify-js
 
