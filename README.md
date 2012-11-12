@@ -1,0 +1,4 @@
+shr
+===
+
+Sharing made simple.
