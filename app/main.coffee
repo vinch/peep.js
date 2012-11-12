@@ -5,7 +5,7 @@ shr.JSONP = (location) ->
   script.src = location
   document.querySelector('head').appendChild(script)
 
-class shr.Share
+class shr.Shr
   constructor: (@container, @options) ->
     @options = @options || {};
     @options.location = @options.location || window.location.href

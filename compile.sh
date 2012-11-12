@@ -1,2 +1,2 @@
-coffee --output public --join share.js --bare --compile app
-uglifyjs --output public/share.min.js public/share.js
+coffee --output public --join shr.js --bare --compile app
+uglifyjs --output public/shr.min.js public/shr.js

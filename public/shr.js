@@ -12,9 +12,9 @@ shr.JSONP = function(location) {
   return document.querySelector('head').appendChild(script);
 };
 
-shr.Share = (function() {
+shr.Shr = (function() {
 
-  function Share(container, options) {
+  function Shr(container, options) {
     var stylesheet,
       _this = this;
     this.container = container;
@@ -38,7 +38,7 @@ shr.Share = (function() {
     document.querySelector('head').appendChild(stylesheet);
   }
 
-  return Share;
+  return Shr;
 
 })();
 
