@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Shr example</title>
+</head>
+<body>
+  <div id="share"></div>
+  <script src="public/share.min.js"></script>
+  <script>
+    window.onload = function() {
+      new shr.Share('#share', {
+        location: 'http://brdrck.me',
+        title: 'Jeff Broderick'
+      }); 
+    }
+  </script>
+</body>
+</html>

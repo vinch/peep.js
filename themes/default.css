@@ -1,0 +1,21 @@
+.shr_share {
+  display: inline-block;
+  font-family: sans-serif;
+  margin-right: 10px;
+  font-size: 13px;
+}
+.shr_share .label, .shr_share .count {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+}
+.shr_share .label {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+.shr_share .label:hover {
+  background: #f7f7f7;
+}
+.shr_share .count {
+  background: #ddd;
+}
