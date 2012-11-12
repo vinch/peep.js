@@ -27,7 +27,7 @@ This will create two files in /public:
 
 ## Contribute
 
-You can extend shr by adding more services and more themes.
+You can extend **shr** by adding more services and more themes.
 
 To add a new service, add a new file in the /app/services folder. Just copy one existing service to create yours.
 It just requires a constructor and a callback for the count.
