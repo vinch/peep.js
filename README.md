@@ -1,4 +1,4 @@
-# shr
+# Peep.js
 
 Sharing made simple.
 
@@ -22,12 +22,12 @@ To compile, just run this command in your console:
 
 This will create two files in /public:
 
-- shr.js
-- shr.min.js
+- peep.js
+- peep.min.js
 
 ## Contribute
 
-You can extend **shr** by adding more services and more themes.
+You can extend **Peep.js** by adding more services and more themes.
 
 To add a new service, add a new file in the /app/services folder. Just copy one existing service to create yours.
 It just requires a constructor and a callback for the count.

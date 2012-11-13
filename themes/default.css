@@ -1,24 +1,24 @@
-.shr_share {
+.peep_share {
   display: inline-block;
   font-family: sans-serif;
   margin-right: 10px;
   font-size: 13px;
 }
-.shr_share .label, .shr_share .count {
+.peep_share .label, .peep_share .count {
   display: inline-block;
   padding: 0 8px;
   border: 1px solid #ddd;
   height: 25px;
   line-height: 25px;
 }
-.shr_share .label {
+.peep_share .label {
   color: #333;
   text-decoration: none;
   font-weight: bold;
 }
-.shr_share .label:hover {
+.peep_share .label:hover {
   background: #f7f7f7;
 }
-.shr_share .count {
+.peep_share .count {
   background: #ddd;
 }

@@ -1,12 +1,12 @@
-class shr.Linkedin extends shr.Service
-  constructor: (@container, @location, @title) ->
-    @label = 'Linkedin'
+class peep.LinkedIn extends peep.Service
+  constructor: (@node, @id, @url, @title) ->
+    @label = 'LinkedIn'
     @class = 'linkedin'
     @endpoints = {
-      share: ' http://linkedin.com/shareArticle?url=' + @location + '&title=' + @title
-      count: 'http://linkedin.com/countserv/count/share?url=' + @location + '&callback=shr.services.linkedin.callback'
+      share: ' http://linkedin.com/shareArticle?url=' + @url + '&title=' + @title
+      count: 'http://linkedin.com/countserv/count/share?url=' + @url + '&callback=peep.instances[' + @id + '].services.LinkedIn.callback'
     }
     @render()
     
   callback: (res) ->
-    document.querySelector(@container + ' .' + @class + ' .count').innerHTML = res.count
+    @node.querySelector('.' + @class + ' .count').innerHTML = res.count

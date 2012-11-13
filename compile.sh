@@ -1,2 +1,2 @@
-coffee --output public --join shr.js --bare --compile app
-uglifyjs --output public/shr.min.js public/shr.js
+coffee --output public --join peep.js --bare --compile app
+uglifyjs --no-copyright --output public/peep.min.js public/peep.js

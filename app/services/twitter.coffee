@@ -1,12 +1,12 @@
-class shr.Twitter extends shr.Service
-  constructor: (@container, @location, @title) ->
+class peep.Twitter extends peep.Service
+  constructor: (@node, @id, @url, @title) ->
     @label = 'Twitter'
     @class = 'twitter'
     @endpoints = {
-      share: 'https://twitter.com/intent/tweet?text=' + @title + '&url=' + @location
-      count: 'http://urls.api.twitter.com/1/urls/count.json?url=' + @location + '&callback=shr.services.twitter.callback'
+      share: 'https://twitter.com/intent/tweet?text=' + @title + '&url=' + @url
+      count: 'http://urls.api.twitter.com/1/urls/count.json?url=' + @url + '&callback=peep.instances[' + @id + '].services.Twitter.callback'
     }
     @render()
     
   callback: (res) ->
-    document.querySelector(@container + ' .' + @class + ' .count').innerHTML = res.count
+    @node.querySelector('.' + @class + ' .count').innerHTML = res.count
