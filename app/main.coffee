@@ -32,7 +32,7 @@ class peep.Instance
     @id = dataset.id
     @url = dataset.url or window.location.href
     @title = dataset.title or document.title;
-    @services = dataset.services or 'Twitter, Facebook';
+    @services = dataset.services or 'Twitter, Facebook, Pinterest';
 
     peep.instances[@id] = {}
     peep.instances[@id].services = []
