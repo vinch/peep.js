@@ -32,10 +32,12 @@ peep.Peep = (function() {
       node.setAttribute('data-id', index);
       new peep.Instance(node);
     }
-    stylesheet = document.createElement('link');
-    stylesheet.rel = 'stylesheet';
-    stylesheet.href = 'themes/' + this.options.theme + '.css';
-    document.querySelector('head').appendChild(stylesheet);
+    if (this.options.theme !== 'none') {
+      stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = this.options.theme.substr(0, 7) === 'http://' || this.options.theme.substr(0, 8) === 'https://' ? this.options.theme : 'themes/' + this.options.theme + '.css';
+      document.querySelector('head').appendChild(stylesheet);
+    }
   }
 
   return Peep;

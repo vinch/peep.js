@@ -19,10 +19,11 @@ class peep.Peep
       node.setAttribute('data-id', index)
       new peep.Instance(node)
     
-    stylesheet = document.createElement('link')
-    stylesheet.rel = 'stylesheet'
-    stylesheet.href = 'themes/' + @options.theme + '.css'
-    document.querySelector('head').appendChild(stylesheet)
+    if @options.theme != 'none'
+      stylesheet = document.createElement('link')
+      stylesheet.rel = 'stylesheet'
+      stylesheet.href = if @options.theme.substr(0,7) == 'http://' or @options.theme.substr(0,8) == 'https://' then @options.theme else 'themes/' + @options.theme + '.css'
+      document.querySelector('head').appendChild(stylesheet)
 
 class peep.Instance
   constructor: (@node) ->
