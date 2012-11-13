@@ -9,4 +9,6 @@ class peep.Twitter extends peep.Service
     @render()
     
   callback: (res) ->
-    @node.querySelector('.' + @class + ' .count').removeAttribute('loading').innerHTML = res.count
+    count = @node.querySelector('.' + @class + ' .count')
+    count.removeAttribute('loading')
+    count.innerHTML = res.count

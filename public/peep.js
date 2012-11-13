@@ -102,8 +102,11 @@ peep.Facebook = (function(_super) {
   }
 
   Facebook.prototype.callback = function(res) {
+    var count;
     res.shares = res.shares || 0;
-    return this.node.querySelector('.' + this["class"] + ' .count').removeAttribute('loading').innerHTML = res.shares;
+    count = this.node.querySelector('.' + this["class"] + ' .count');
+    count.removeAttribute('loading');
+    return count.innerHTML = res.shares;
   };
 
   return Facebook;
@@ -129,7 +132,10 @@ peep.LinkedIn = (function(_super) {
   }
 
   LinkedIn.prototype.callback = function(res) {
-    return this.node.querySelector('.' + this["class"] + ' .count').removeAttribute('loading').innerHTML = res.count;
+    var count;
+    count = this.node.querySelector('.' + this["class"] + ' .count');
+    count.removeAttribute('loading');
+    return count.innerHTML = res.count;
   };
 
   return LinkedIn;
@@ -155,7 +161,10 @@ peep.Twitter = (function(_super) {
   }
 
   Twitter.prototype.callback = function(res) {
-    return this.node.querySelector('.' + this["class"] + ' .count').removeAttribute('loading').innerHTML = res.count;
+    var count;
+    count = this.node.querySelector('.' + this["class"] + ' .count');
+    count.removeAttribute('loading');
+    return count.innerHTML = res.count;
   };
 
   return Twitter;
