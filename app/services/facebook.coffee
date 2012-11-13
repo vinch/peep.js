@@ -10,4 +10,4 @@ class peep.Facebook extends peep.Service
     
   callback: (res) ->
     res.shares = res.shares || 0
-    @node.querySelector('.' + @class + ' .count').innerHTML = res.shares
+    @node.querySelector('.' + @class + ' .count').removeAttribute('loading').innerHTML = res.shares

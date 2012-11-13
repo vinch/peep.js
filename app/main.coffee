@@ -45,4 +45,4 @@ class peep.Instance
 class peep.Service
   render: () ->
     peep.JSONP @endpoints.count
-    @node.innerHTML += '<div class="peep_share ' + @class + '"><a href="' + @endpoints.share + '" class="label" onclick="peep.openPopup(this.href);return false;">' + @label + '</a><span class="count">...</span></div>'
+    @node.innerHTML += '<div class="peep_share ' + @class + '"><a href="' + @endpoints.share + '" class="label" onclick="peep.openPopup(this.href);return false;">' + @label + '</a><span class="count loading">...</span></div>'
