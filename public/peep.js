@@ -76,7 +76,7 @@ peep.Service = (function() {
 
   Service.prototype.render = function() {
     peep.JSONP(this.endpoints.count);
-    return this.node.innerHTML += '<div class="peep_share ' + this["class"] + '"><a href="' + this.endpoints.share + '" class="label" onclick="peep.openPopup(this.href);return false;">' + this.label + '</a><span class="count">...</span></div>';
+    return this.node.innerHTML += '<div class="peep_share ' + this["class"] + '"><a href="' + this.endpoints.share + '" class="label" onclick="peep.openPopup(this.href);return false;">' + this.label + '</a><span class="count loading">...</span></div>';
   };
 
   return Service;
@@ -103,7 +103,7 @@ peep.Facebook = (function(_super) {
 
   Facebook.prototype.callback = function(res) {
     res.shares = res.shares || 0;
-    return this.node.querySelector('.' + this["class"] + ' .count').innerHTML = res.shares;
+    return this.node.querySelector('.' + this["class"] + ' .count').removeAttribute('loading').innerHTML = res.shares;
   };
 
   return Facebook;
@@ -129,7 +129,7 @@ peep.LinkedIn = (function(_super) {
   }
 
   LinkedIn.prototype.callback = function(res) {
-    return this.node.querySelector('.' + this["class"] + ' .count').innerHTML = res.count;
+    return this.node.querySelector('.' + this["class"] + ' .count').removeAttribute('loading').innerHTML = res.count;
   };
 
   return LinkedIn;
@@ -155,7 +155,7 @@ peep.Twitter = (function(_super) {
   }
 
   Twitter.prototype.callback = function(res) {
-    return this.node.querySelector('.' + this["class"] + ' .count').innerHTML = res.count;
+    return this.node.querySelector('.' + this["class"] + ' .count').removeAttribute('loading').innerHTML = res.count;
   };
 
   return Twitter;
