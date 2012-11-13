@@ -8,17 +8,19 @@
   display: inline-block;
   padding: 0 8px;
   border: 1px solid #ddd;
-  height: 25px;
-  line-height: 25px;
+  height: 26px;
+  line-height: 26px;
 }
 .peep_share .label {
-  color: #333;
+  color: #999;
   text-decoration: none;
   font-weight: bold;
 }
 .peep_share .label:hover {
-  background: #f7f7f7;
+  background: #eee;
+  color: #333;
 }
 .peep_share .count {
   background: #ddd;
+  color: #333;
 }
