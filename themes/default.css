@@ -10,11 +10,12 @@
   border: 1px solid #ddd;
   height: 26px;
   line-height: 26px;
+  font-weight: bold;
 }
 .peep_share .label {
+  background: #fff;
   color: #999;
   text-decoration: none;
-  font-weight: bold;
 }
 .peep_share .label:hover {
   background: #eee;
