@@ -1,0 +1,62 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+.peep_share {
+  display: inline-block;
+  font-family: 'Montserrat', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 20px;
+}
+.peep_share .label, .peep_share .count {
+        color: #fafafa;
+        display: inline-block;
+          text-decoration: none;
+          cursor: pointer;
+          margin: 20px;
+          padding: 14px 50px;
+          text-transform: uppercase;
+          letter-spacing:4px;
+    
+}
+.peep_share .label {
+ -webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;  
+margin-right:0;    
+}
+.peep_share.twitter .label {
+     background:#74c8f1;
+ border:#74c8f1 1px solid;
+}
+.peep_share.facebook .label {
+ background:#587ecd;
+ border:#587ecd 1px solid;    
+}
+.peep_share.linkedin .label {
+     background:#98d3e6;
+ border:#98d3e6 1px solid;
+}
+.peep_share .label:hover{
+  background:#fafafa;   
+}
+.peep_share.facebook .label:hover {
+color:#587ecd;    
+}
+.peep_share.twitter .label:hover {
+color:#74c8f1;    
+}
+.peep_share.linkedin .label:hover {
+color:#98d3e6;    
+}
+.peep_share .count {
+    padding: 6px 6px 6px 12px;
+    letter-spacing:2px;
+   -webkit-border-top-right-radius: 3px;
+-webkit-border-bottom-right-radius: 3px;
+-moz-border-radius-topright: 3px;
+-moz-border-radius-bottomright: 3px;
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+    margin-left:0; 
+    background: #ededed;
+  color: #333;
+}​
