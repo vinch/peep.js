@@ -32,7 +32,7 @@ class peep.Instance
     @id = dataset.id
     @url = dataset.url or window.location.href
     @title = dataset.title or document.title;
-    @services = dataset.services or 'Twitter, Facebook, Pinterest';
+    @services = dataset.services or 'Twitter, Facebook';
 
     peep.instances[@id] = {}
     peep.instances[@id].services = []
@@ -44,10 +44,12 @@ class peep.Instance
 
 class peep.Service
   render: () ->
-    peep.JSONP @endpoints.count
-    @node.innerHTML += "<div class=\"peep_share #{@class}\"><a href=\"#{@endpoints.share}\" class=\"label\" onclick=\"peep.openPopup(this.href);return false;\">#{@label}</a><span class=\"count loading\">...</span></div>"
+    @node.innerHTML += "<div class=\"peep_share #{@class}\"><a href=\"#{@endpoints.share}\" class=\"label\" onclick=\"peep.openPopup(this.href);return false;\">#{@label}</a></div>"
+    if (@endpoints.count)
+      peep.JSONP @endpoints.count
+      @node.querySelector(".#{@class}").innerHTML += '<span class=\"count loading\">...</span>'
 
   callback: (res) ->
     count = @node.querySelector(".#{@class} .count")
     count.removeAttribute('loading')
-    count.innerHTML = res.shares or res.count or 0
+    count.innerHTML = eval(@path) or 0
