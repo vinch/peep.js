@@ -5,8 +5,12 @@ peep.JSONP = (location) ->
   script.src = location
   document.querySelector('head').appendChild(script)
 
-peep.openPopup = (url) ->
-  window.open(url, 'sharer', 'toolbar=0,status=0,resizable=1,width=626,height=436')
+peep.openPopup = (url,w,h) ->
+  w ||= 626
+  h ||= 436
+  x = (screen.width/2)-(w/2)
+  y = (screen.height/2)-(h/2)
+  window.open(url, 'peepshare', 'toolbar=0,status=0,resizable=1,width='+w+',height='+h+',top='+y+',left='+x)
 
 class peep.Peep
   constructor: (@selector, @options) ->
