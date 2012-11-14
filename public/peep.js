@@ -12,8 +12,13 @@ peep.JSONP = function(location) {
   return document.querySelector('head').appendChild(script);
 };
 
-peep.openPopup = function(url) {
-  return window.open(url, 'sharer', 'toolbar=0,status=0,resizable=1,width=626,height=436');
+peep.openPopup = function(url, w, h) {
+  var x, y;
+  w || (w = 626);
+  h || (h = 436);
+  x = (screen.width / 2) - (w / 2);
+  y = (screen.height / 2) - (h / 2);
+  return window.open(url, 'peepshare', 'toolbar=0,status=0,resizable=1,width=' + w + ',height=' + h + ',top=' + y + ',left=' + x);
 };
 
 peep.Peep = (function() {
