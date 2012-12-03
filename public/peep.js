@@ -156,8 +156,10 @@ peep.GooglePlus = (function(_super) {
     this.label = 'Google+';
     this["class"] = 'googleplus';
     this.endpoints = {
-      share: "https://plus.google.com/share?url=" + this.url
+      share: "https://plus.google.com/share?url=" + this.url,
+      count: "http://plusonecount.herokuapp.com/?url=" + this.url + "&callback=peep.instances[" + this.id + "].services.GooglePlus.callback"
     };
+    this.path = 'res.count';
     this.render();
   }
 
